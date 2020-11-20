@@ -1,0 +1,7 @@
+name: CoreEssentials
+version: 0.0.1
+main: me.luligabi.coreessentials.CoreEssentials
+authors: [Luligabi]
+website: https://github.com/Luligabi1/CoreEssentials
+commands:
+    clock:
