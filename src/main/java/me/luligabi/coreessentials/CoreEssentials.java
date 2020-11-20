@@ -6,11 +6,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CoreEssentials extends JavaPlugin {
 
+    public static CoreEssentials plugin;
+
     @Override
     public void onEnable() {
+        plugin = this;
         registerCommands();
+        saveDefaultConfig();
     }
-
     @Override
     public void onDisable() {
 

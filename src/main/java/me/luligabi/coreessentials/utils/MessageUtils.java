@@ -1,16 +1,21 @@
 package me.luligabi.coreessentials.utils;
 
+import me.luligabi.coreessentials.CoreEssentials;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class MessageUtils {
 
+    public static String sucessMessage(String prefix, String message) {
+        return ChatColor.translateAlternateColorCodes('&', CoreEssentials.plugin.getConfig().getString("sucessMessage"))
+                .replace("%prefix%", prefix)
+                .replace("%message%", message);
+    }
 
     /*
      * Originally from this Spigot forums resouce by SirSpoodles:
      * https://www.spigotmc.org/threads/free-code-sending-perfectly-centered-chat-message.95872/
      */
-
     private final static int CENTER_PX = 154;
 
     public static void sendCenteredMessage(Player player, String message){
