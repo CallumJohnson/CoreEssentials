@@ -7,12 +7,24 @@
 
 ## Generic Messages
 
-# Sucess message. %prefix% - Prefix, %message% - Message
-sucessMessage: '&9%prefix%> &7%message%'
+# Success message. %prefix% - Prefix, %message% - Message
+successMessage: '&9%prefix%> &7%message%'
 
+# Error message. %prefix% - Prefix, %message% - Message
+errorMessage: '&4%prefix%> &c%message%'
+
+# Permission message. %permission% - permission
+permissionMessage: '&4Permission> &cYou do not have permission to do this! (%permission%)'
+
+notAPlayer: '&cYou must be a player to use this command!'
 
 ## ClearChat Command
 
+# /clock command message. %player% - Player who cleared the chat
+clearChatSuccess: '&6&lChat Cleared by %player%&6&l!'
+
+# /clock command message if the -s (silent) argument is used.
+clearChatSuccessSilent: '&6&lChat Cleared!'
 
 ## Clock Command
 
@@ -20,7 +32,7 @@ sucessMessage: '&9%prefix%> &7%message%'
 clockPrefix: 'Clock'
 
 # /clock command message. %clock% - time being displayed.
-clockSucess: 'The current time is &e%clock%&7.'
+clockSuccess: 'The current time is &e%clock%&7.'
 
 # Use AM/PM when telling the world's time? Default: true
 ampm: true

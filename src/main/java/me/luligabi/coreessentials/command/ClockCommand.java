@@ -17,15 +17,15 @@ public class ClockCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
-            sender.sendMessage("");
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("notAPlayer")));
             return true;
         }
         Player p = (Player) sender;
         if(!p.hasPermission(Permissions.COMMAND_CLOCK)) {
-            p.sendMessage("");
+            p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_CLOCK));
             return true;
         }
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', MessageUtils.sucessMessage(cfg.getString("clockPrefix"), cfg.getString("clockSucess")
+        p.sendMessage(ChatColor.translateAlternateColorCodes('&', MessageUtils.successMessage(cfg.getString("clockPrefix"), cfg.getString("clockSuccess")
                 .replace("%clock%", parseTime(p.getWorld().getTime(), cfg.getBoolean("ampm"))))));
         return false;
     }
