@@ -39,7 +39,7 @@ public class ClockCommand implements CommandExecutor {
                 ampmsys = "AM";
             }
             if (hours == 0) hours = 12;
-            return hours + ":" + mm + " " + ampmsys;
+            return hours + ":" + mm + ampmsys;
         }
     }
 }
