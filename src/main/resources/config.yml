@@ -5,7 +5,7 @@
 ###   | \__/\ (_) | | |  __/ | |__\__ \__ \  __/ | | | |_| | (_| | \__ \
 ###    \____/\___/|_|  \___| \____/___/___/\___|_| |_|\__|_|\__,_|_|___/
 
-## Generic Messages
+## *Generic Messages*
 
 # Success message. %prefix% - Prefix, %message% - Message
 successMessage: '&9%prefix%> &7%message%'
@@ -18,7 +18,7 @@ permissionMessage: '&4Permission> &cYou do not have permission to do this! (%per
 
 notAPlayer: '&cYou must be a player to use this command!'
 
-## ClearChat Command
+## *ClearChat Command*
 
 # /clock command message. %player% - Player who cleared the chat
 clearChatSuccess: '&6&lChat Cleared by %player%&6&l!'
@@ -26,7 +26,7 @@ clearChatSuccess: '&6&lChat Cleared by %player%&6&l!'
 # /clock command message if the -s (silent) argument is used.
 clearChatSuccessSilent: '&6&lChat Cleared!'
 
-## Clock Command
+## *Clock Command*
 
 # /clock command prefix
 clockPrefix: 'Clock'
@@ -36,6 +36,32 @@ clockSuccess: 'The current time is &e%clock%&7.'
 
 # Use AM/PM when telling the world's time? Default: true
 ampm: true
+
+## *Fly Command*
+
+# /fly command prefix
+flyPrefix: 'Fly'
+
+flySuccessEnable: 'Your fly was enabled.'
+
+flySuccessDisable: 'Your fly was disabled.'
+
+
+flySucessOtherEnable: ''
+
+flySucessOtherEnableTarget: ''
+
+flySucessOtherDisable: ''
+
+flySucessOtherDisableTarget: ''
+
+
+
+# /fly incorret usage message
+flyIncorrectUsage: ''
+
+
+
 
 
 
