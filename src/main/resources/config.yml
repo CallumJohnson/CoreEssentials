@@ -41,6 +41,14 @@ clockSuccess: 'The current time is &e%clock%&7.'
 # Use AM/PM when telling the world's time? Default: true
 ampm: true
 
+## *Day Command*
+
+# /day command prefix
+dayPrefix: 'Day'
+
+# /day command message
+daySuccess: 'Time on &e%world% &7was set to &eDAY&7.'
+
 ## *Feed Command*
 
 # /feed command prefix

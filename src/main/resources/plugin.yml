@@ -9,6 +9,8 @@ commands:
         description: Clears all recent chat. Use the -s argument to hide who executed the command.
     clock:
         description: Shows the current time on the player's world.
+    day:
+        description: Sets time to day on the current world.
     feed:
         description: Replenished yours or other player's hunger bar to the maximum capacity.
     fly:
