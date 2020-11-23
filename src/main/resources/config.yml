@@ -109,6 +109,14 @@ healSuccessOtherTarget: 'You were &ehealed &7by &e%player%&7.'
 # /heal incorrect usage message
 healIncorrectUsage: 'Incorrect Usage! Use /heal [player]'
 
+## *Night Command*
+
+# /night command prefix
+nightPrefix: 'Night'
+
+# /night command message
+nightSuccess: 'Time on &e%world% &7was set to &eNIGHT&7.'
+
 
 
 
