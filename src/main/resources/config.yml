@@ -41,6 +41,23 @@ clockSuccess: 'The current time is &e%clock%&7.'
 # Use AM/PM when telling the world's time? Default: true
 ampm: true
 
+## *Feed Command*
+
+# /feed command prefix
+feedPrefix: 'Feed'
+
+# /feed command message (feeding yourself)
+feedSuccess: 'You were feed!'
+
+# /feed command message (feeding other player)
+feedSuccessOther: 'You &efeed %target%&7.'
+
+# /feed command message (feed by other player)
+feedSuccessOtherTarget: 'You were &efeed &7by &e%player%&7.'
+
+# /feed incorrect usage message
+feedIncorrectUsage: 'Incorrect Usage! Use /feed [player]'
+
 ## *Fly Command*
 
 # /fly command prefix
@@ -83,6 +100,7 @@ healSuccessOtherTarget: 'You were &ehealed &7by &e%player%&7.'
 
 # /heal incorrect usage message
 healIncorrectUsage: 'Incorrect Usage! Use /heal [player]'
+
 
 
 

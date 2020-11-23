@@ -11,10 +11,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class HealCommand implements CommandExecutor {
+public class FeedCommand implements CommandExecutor {
 
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
-    String prefix = cfg.getString("healPrefix");
+    String prefix = cfg.getString("feedPrefix");
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -23,31 +23,31 @@ public class HealCommand implements CommandExecutor {
             return true;
         }
         Player p = (Player) sender;
-        if(!p.hasPermission(Permissions.COMMAND_HEAL)) {
-            p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_HEAL));
+        if(!p.hasPermission(Permissions.COMMAND_FEED)) {
+            p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_FEED));
             return true;
         }
         if(args.length == 0) {
-            p.setHealth(20.0);
-            p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("healSuccess")));
+            p.setFoodLevel(20);
+            p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("feedSuccess")));
         } else if(args.length == 1) {
-            if(!p.hasPermission(Permissions.COMMAND_HEAL_OTHERS)) {
-                p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_HEAL_OTHERS));
+            if(!p.hasPermission(Permissions.COMMAND_FEED_OTHERS)) {
+                p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_FEED_OTHERS));
                 return true;
             }
             Player target = Bukkit.getPlayerExact(args[0]);
             if(target != null) {
-                target.setHealth(20.0);
-                target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("healSuccessOtherTarget")
+                target.setFoodLevel(20);
+                target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("feedSuccessOtherTarget")
                         .replace("%player%", p.getDisplayName())));
-                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("healSuccessOther")
+                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("feedSuccessOther")
                         .replace("%target%", target.getDisplayName())));
             } else {
                 p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("targetNotOnline")
                         .replace("%target%", args[0])));
             }
         } else if(args.length >= 2) {
-            p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("healIncorrectUsage")));
+            p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("feedIncorrectUsage")));
             return true;
         }
         return false;
