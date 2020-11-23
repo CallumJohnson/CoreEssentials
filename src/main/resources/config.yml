@@ -16,7 +16,11 @@ errorMessage: '&4%prefix%> &c%message%'
 # Permission message. %permission% - permission
 permissionMessage: '&4Permission> &cYou do not have permission to do this! (%permission%)'
 
+# Message if player-only command is used by the console.
 notAPlayer: '&cYou must be a player to use this command!'
+
+# Message if command's target is offline.
+targetNotOnline: '&4%target% &cis not online!'
 
 ## *ClearChat Command*
 
@@ -42,23 +46,26 @@ ampm: true
 # /fly command prefix
 flyPrefix: 'Fly'
 
-flySuccessEnable: 'Your fly was enabled.'
+# /fly command message (enabling your own fly)
+flySuccessEnable: 'Your fly was &eenabled&7.'
 
-flySuccessDisable: 'Your fly was disabled.'
+# /fly command message (disabling your own fly)
+flySuccessDisable: 'Your fly was &edisabled&7.'
 
+# /fly command message (enabling other player's fly)
+flySucessOtherEnable: 'You &eenabled %target%''s &7fly.'
 
-flySucessOtherEnable: ''
+# /fly command message (enabled by other player)
+flySucessOtherEnableTarget: 'Your fly was &eenabled &7by &e%player%&7.'
 
-flySucessOtherEnableTarget: ''
+# /fly command message (disabling other player's fly)
+flySucessOtherDisable: 'You &edisabled %target%''s &7fly.'
 
-flySucessOtherDisable: ''
-
-flySucessOtherDisableTarget: ''
-
-
+# /fly command message (disabled by other player)
+flySucessOtherDisableTarget: 'Your fly was &edisabled &7by &e%player%&7.'
 
 # /fly incorret usage message
-flyIncorrectUsage: ''
+flyIncorrectUsage: 'Incorrect Usage! Use /fly [player]'
 
 
 

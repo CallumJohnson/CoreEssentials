@@ -30,10 +30,10 @@ public class FlyCommand implements CommandExecutor {
         if(args.length == 0) {
             if(!p.getAllowFlight()) {
                 p.setAllowFlight(true);
-                p.sendMessage(MessageUtils.successMessage(prefix, ""));
+                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySuccessEnable")));
             } else {
                 p.setAllowFlight(false);
-                p.sendMessage(MessageUtils.successMessage(prefix, ""));
+                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySuccessDisable")));
             }
         } else if(args.length == 1) {
             if(!p.hasPermission(Permissions.COMMAND_FLY_OTHERS)) {
@@ -42,25 +42,28 @@ public class FlyCommand implements CommandExecutor {
             }
             Player target = Bukkit.getPlayerExact(args[0]);
             if(target != null) {
-                if(!p.getAllowFlight()) {
-                    p.setAllowFlight(true);
-                    target.sendMessage(MessageUtils.successMessage(prefix, ""));
-                    p.sendMessage(MessageUtils.successMessage(prefix, ""));
+                if(!target.getAllowFlight()) {
+                    target.setAllowFlight(true);
+                    target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherEnableTarget")
+                            .replace("%player%", p.getDisplayName())));
+                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherEnable")
+                            .replace("%target%", target.getDisplayName())));
+
                 } else {
-                    p.setAllowFlight(false);
-                    target.sendMessage(MessageUtils.successMessage(prefix, ""));
-                    p.sendMessage(MessageUtils.successMessage(prefix, ""));
+                    target.setAllowFlight(false);
+                    target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherDisableTarget")
+                            .replace("%player%", p.getDisplayName())));
+                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherDisable")
+                            .replace("%target%", target.getDisplayName())));
                 }
             } else {
-                p.sendMessage(MessageUtils.errorMessage(prefix, "not online")); //target not online
+                p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("targetNotOnline")
+                    .replace("%target%", args[0])));
             }
         } else if(args.length >= 2) {
-            p.sendMessage(MessageUtils.errorMessage(prefix, "too many arguments")); //too many arguments
+            p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("flyIncorrectUsage")));
             return true;
         }
         return false;
-    }
-    private void checkFlyStatus(Player p) {
-
     }
 }
