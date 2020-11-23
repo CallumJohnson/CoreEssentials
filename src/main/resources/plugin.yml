@@ -6,7 +6,12 @@ website: https://github.com/Luligabi1/CoreEssentials
 commands:
     clearchat:
         aliases: [cc]
+        description: Clears all recent chat. Use the -s argument to hide who executed the command.
     clock:
+        description: Shows the current time on the player's world.
     feed:
+        description: Replenished yours or other player's hunger bar to the maximum capacity.
     fly:
+        description: Toggles yours or other player's ability to fly, regardless of gamemode.
     heal:
+        description: Replenished yours or other player's hunger bar to the maximum capacity.
