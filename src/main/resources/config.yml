@@ -53,19 +53,37 @@ flySuccessEnable: 'Your fly was &eenabled&7.'
 flySuccessDisable: 'Your fly was &edisabled&7.'
 
 # /fly command message (enabling other player's fly)
-flySucessOtherEnable: 'You &eenabled %target%''s &7fly.'
+flySuccessOtherEnable: 'You &eenabled %target%''s &7fly.'
 
 # /fly command message (enabled by other player)
-flySucessOtherEnableTarget: 'Your fly was &eenabled &7by &e%player%&7.'
+flySuccessOtherEnableTarget: 'Your fly was &eenabled &7by &e%player%&7.'
 
 # /fly command message (disabling other player's fly)
-flySucessOtherDisable: 'You &edisabled %target%''s &7fly.'
+flySuccessOtherDisable: 'You &edisabled %target%''s &7fly.'
 
 # /fly command message (disabled by other player)
-flySucessOtherDisableTarget: 'Your fly was &edisabled &7by &e%player%&7.'
+flySuccessOtherDisableTarget: 'Your fly was &edisabled &7by &e%player%&7.'
 
-# /fly incorret usage message
+# /fly incorrect usage message
 flyIncorrectUsage: 'Incorrect Usage! Use /fly [player]'
+
+## *Heal Command*
+
+# /heal command prefix
+healPrefix: 'Heal'
+
+# /heal command message (healing yourself)
+healSuccess: 'You were healed!'
+
+# /heal command message (healing other player)
+healSuccessOther: 'You &ehealed %target%&7.'
+
+# /heal command message (healed by other player)
+healSuccessOtherTarget: 'You were &ehealed &7by &e%player%&7.'
+
+# /heal incorrect usage message
+healIncorrectUsage: 'Incorrect Usage! Use /heal [player]'
+
 
 
 

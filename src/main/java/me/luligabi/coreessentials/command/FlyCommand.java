@@ -46,14 +46,14 @@ public class FlyCommand implements CommandExecutor {
                     target.setAllowFlight(true);
                     target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherEnableTarget")
                             .replace("%player%", p.getDisplayName())));
-                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherEnable")
+                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySuccessOtherEnable")
                             .replace("%target%", target.getDisplayName())));
 
                 } else {
                     target.setAllowFlight(false);
-                    target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherDisableTarget")
+                    target.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySuccessOtherDisableTarget")
                             .replace("%player%", p.getDisplayName())));
-                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySucessOtherDisable")
+                    p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("flySuccessOtherDisable")
                             .replace("%target%", target.getDisplayName())));
                 }
             } else {

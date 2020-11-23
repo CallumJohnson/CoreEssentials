@@ -25,8 +25,8 @@ public class ClockCommand implements CommandExecutor {
             p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_CLOCK));
             return true;
         }
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', MessageUtils.successMessage(cfg.getString("clockPrefix"), cfg.getString("clockSuccess")
-                .replace("%clock%", parseTime(p.getWorld().getTime(), cfg.getBoolean("ampm"))))));
+        p.sendMessage(MessageUtils.successMessage(cfg.getString("clockPrefix"), cfg.getString("clockSuccess")
+                .replace("%clock%", parseTime(p.getWorld().getTime(), cfg.getBoolean("ampm")))));
         return false;
     }
     private static String parseTime(long time, boolean ampm) {
