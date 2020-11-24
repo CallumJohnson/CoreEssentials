@@ -19,3 +19,5 @@ commands:
         description: Replenished yours or other player's hunger bar to the maximum capacity.
     ping:
         description: Get your latency ping in ms.
+    sun:
+        description: Sets world weather to sunny.

@@ -125,6 +125,14 @@ pingPrefix: 'Ping'
 # /ping command message.
 pingSuccess: 'Your ping is &e%ping%ms&7.'
 
+## *Sun Command*
+
+# /sun command prefix
+sunPrefix: 'Sun'
+
+# /sun command message
+sunSuccess: 'Weather on &e%world% &7was set to &eSUNNY&7.'
+
 
 
 

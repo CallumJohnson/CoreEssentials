@@ -3,6 +3,7 @@ package me.luligabi.coreessentials.command;
 import me.luligabi.coreessentials.CoreEssentials;
 import me.luligabi.coreessentials.utils.MessageUtils;
 import me.luligabi.coreessentials.utils.Permissions;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -19,7 +20,7 @@ public class PingCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
-            sender.sendMessage("a");
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', cfg.getString("notAPlayer")));
             return true;
         }
         Player p = (Player) sender;
@@ -29,7 +30,7 @@ public class PingCommand implements CommandExecutor {
         }
         p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("pingSuccess")
                 .replace("%ping%", Integer.toString(getPing(p)))));
-        return false;
+        return false; //TODO: Add ability to see other player's ping.
     }
     public static int getPing(Player player) {
         try {
