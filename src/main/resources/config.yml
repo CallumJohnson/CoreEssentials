@@ -117,6 +117,14 @@ nightPrefix: 'Night'
 # /night command message
 nightSuccess: 'Time on &e%world% &7was set to &eNIGHT&7.'
 
+## *Ping Command*
+
+# /ping command prefix
+pingPrefix: 'Ping'
+
+# /ping command message.
+pingSuccess: 'Your ping is &e%ping%ms&7.'
+
 
 
 

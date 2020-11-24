@@ -11,4 +11,5 @@ public class Permissions {
     public static String COMMAND_HEAL = "coreessentials.command.heal";
     public static String COMMAND_HEAL_OTHERS = "coreessentials.command.heal.others";
     public static String COMMAND_NIGHT = "coreeessentials.command.night";
+    public static String COMMAND_PING = "coreessentials.command.ping";
 }

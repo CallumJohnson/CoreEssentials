@@ -17,3 +17,5 @@ commands:
         description: Toggles yours or other player's ability to fly, regardless of gamemode.
     heal:
         description: Replenished yours or other player's hunger bar to the maximum capacity.
+    ping:
+        description: Get your latency ping in ms.
