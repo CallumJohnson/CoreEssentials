@@ -10,8 +10,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class NightCommand implements CommandExecutor {
 
+
+public class NightCommand implements CommandExecutor {
 
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
     String prefix = cfg.getString("nightPrefix");
@@ -32,4 +33,3 @@ public class NightCommand implements CommandExecutor {
         return false;
     }
 }
-

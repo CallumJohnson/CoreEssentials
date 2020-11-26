@@ -13,7 +13,8 @@ import org.bukkit.entity.Player;
 
 public class FlyCommand implements CommandExecutor {
 
-    FileConfiguration cfg = CoreEssentials.plugin.getConfig();
+    FileConfiguration cfg = CoreEssentials
+            .plugin.getConfig();
     String prefix = cfg.getString("flyPrefix");
 
     @Override
