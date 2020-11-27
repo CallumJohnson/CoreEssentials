@@ -21,5 +21,7 @@ commands:
         description: Sets time to ngiht on the current world
     ping:
         description: Get your latency ping in ms.
+    rain:
+        description: Sets world weather to rain.
     sun:
         description: Sets world weather to sunny.

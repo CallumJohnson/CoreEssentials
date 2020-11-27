@@ -26,6 +26,7 @@ public final class CoreEssentials extends JavaPlugin {
         getCommand("heal").setExecutor(new HealCommand());
         getCommand("night").setExecutor(new NightCommand());
         getCommand("ping").setExecutor(new PingCommand());
+        getCommand("rain").setExecutor(new RainCommand());
         getCommand("sun").setExecutor(new SunCommand());
     }
 }
