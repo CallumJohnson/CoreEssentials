@@ -28,5 +28,6 @@ public final class CoreEssentials extends JavaPlugin {
         getCommand("ping").setExecutor(new PingCommand());
         getCommand("rain").setExecutor(new RainCommand());
         getCommand("sun").setExecutor(new SunCommand());
+        getCommand("thunder").setExecutor(new ThunderCommand());
     }
 }

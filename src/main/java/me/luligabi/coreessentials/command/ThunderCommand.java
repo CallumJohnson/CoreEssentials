@@ -10,11 +10,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class RainCommand implements CommandExecutor {
+public class ThunderCommand implements CommandExecutor {
 
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
-    String prefix = cfg.getString("rainPrefix");
-
+    String prefix = cfg.getString("thunderPrefix");
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
@@ -22,13 +21,13 @@ public class RainCommand implements CommandExecutor {
             return true;
         }
         Player p = (Player) sender;
-        if(!p.hasPermission(Permissions.COMMAND_RAIN)) {
-            p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_RAIN));
+        if(!p.hasPermission(Permissions.COMMAND_THUNDER)) {
+            p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_THUNDER));
             return true;
         }
         p.getWorld().setStorm(true);
-        p.getWorld().setThundering(false);
-        p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("rainSuccess")
+        p.getWorld().setThundering(true);
+        p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("thunderSuccess")
                 .replace("%world%", p.getWorld().getName())));
         return false;
     }

@@ -141,6 +141,14 @@ sunPrefix: 'Sun'
 # /sun command message
 sunSuccess: 'Weather on &e%world% &7was set to &eSUNNY&7.'
 
+## **Thunder Command*
+
+# /thunder command prefix
+thunderPrefix: 'Thunder'
+
+# /thunder command message
+thunderSuccess: 'Weather on &e%world% &7was set to &eTHUNDER&7.'
+
 
 
 

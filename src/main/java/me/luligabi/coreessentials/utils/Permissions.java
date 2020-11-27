@@ -14,4 +14,5 @@ public class Permissions {
     public static String COMMAND_PING = "coreessentials.command.ping";
     public static String COMMAND_RAIN = "coreesssentials.command.rain";
     public static String COMMAND_SUN = "coressentials.command.sun";
+    public static String COMMAND_THUNDER = "coreessentials.command.thunder";
 }
