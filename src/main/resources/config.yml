@@ -22,6 +22,10 @@ notAPlayer: '&cYou must be a player to use this command!'
 # Message if command's target is offline.
 targetNotOnline: '&4%target% &cis not online!'
 
+### --------------------------------------------------------------------------
+
+### Commands
+
 ## *ClearChat Command*
 
 # /clock command message. %player% - Player who cleared the chat
@@ -155,17 +159,12 @@ thunderPrefix: 'Thunder'
 # /thunder command message
 thunderSuccess: 'Weather on &e%world% &7was set to &eTHUNDER&7.'
 
+### --------------------------------------------------------------------------
 
+### Perks
 
+# Special message for those who have the Join Perk. Other players will have no join message.
+joinMessagePerk: '%player% &6joined the server.'
 
-
-
-
-
-
-
-
-
-
-
-
+# Special message for those who have the Quit Perk. Other players will have no quit message.
+quitMessagePerk: '%player% &6left the server.'

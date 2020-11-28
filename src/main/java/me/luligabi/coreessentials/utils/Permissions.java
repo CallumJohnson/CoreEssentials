@@ -1,6 +1,8 @@
 package me.luligabi.coreessentials.utils;
 
 public class Permissions {
+
+    // Commands
     public static String COMMAND_CLEARCHAT = "coreeessentials.command.clearchat";
     public static String COMMAND_CLOCK = "coreessentials.command.clock";
     public static String COMMAND_DAY = "coreeessentials.command.day";
@@ -16,4 +18,8 @@ public class Permissions {
     public static String COMMAND_RAIN = "coreesssentials.command.rain";
     public static String COMMAND_SUN = "coressentials.command.sun";
     public static String COMMAND_THUNDER = "coreessentials.command.thunder";
+
+    // Perks
+    public static String PERK_JOIN_MESSAGE = "coreessentials.perk.join";
+    public static String PERK_QUIT_MESSAGE = "coreessentials.perk.quit";
 }
