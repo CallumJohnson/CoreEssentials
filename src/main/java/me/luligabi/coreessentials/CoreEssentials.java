@@ -36,5 +36,6 @@ public final class CoreEssentials extends JavaPlugin {
     }
     private void registerPerks() {
         getServer().getPluginManager().registerEvents(new JoinMessagePerk(), this);
+        getServer().getPluginManager().registerEvents(new QuitMessagePerk(), this);
     }
 }
