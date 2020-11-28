@@ -40,11 +40,12 @@ public class PingCommand implements CommandExecutor {
             }
             Player target = Bukkit.getPlayerExact(args[0]);
             if(target != null) {
-                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("healSuccessOther")
-                        .replace("%target%", target.getDisplayName()
-                        .replace("%ping%", Integer.toString(getPing(target))))));
+                p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("pingSuccessOther")
+                        .replace("%target%", target.getDisplayName())
+                        .replace("%ping%", Integer.toString(getPing(target)))));
             } else {
-                p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("targetNotOnline")));
+                p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("targetNotOnline")
+                        .replace("%target%", args[0])));
             }
         }
         if(args.length >= 2) {
