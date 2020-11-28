@@ -12,6 +12,7 @@ public class Permissions {
     public static String COMMAND_HEAL_OTHERS = "coreessentials.command.heal.others";
     public static String COMMAND_NIGHT = "coreeessentials.command.night";
     public static String COMMAND_PING = "coreessentials.command.ping";
+    public static String COMMAND_PING_OTHERS = "coreessentials.command.ping.others";
     public static String COMMAND_RAIN = "coreesssentials.command.rain";
     public static String COMMAND_SUN = "coressentials.command.sun";
     public static String COMMAND_THUNDER = "coreessentials.command.thunder";

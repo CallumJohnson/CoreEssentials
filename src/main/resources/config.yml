@@ -125,6 +125,12 @@ pingPrefix: 'Ping'
 # /ping command message.
 pingSuccess: 'Your ping is &e%ping%ms&7.'
 
+# /ping command message when checking other player's ping.
+pingSuccessOther: '&e%target%&7''s ping is &e%ping%ms&7.'
+
+# /ping incorrect usage message
+pingIncorrectUsage: 'Incorrect Usage! Use /ping [player]'
+
 ## *Rain Command*
 
 # /rain command prefix
