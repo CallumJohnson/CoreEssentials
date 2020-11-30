@@ -27,14 +27,14 @@ public class HatCommand implements CommandExecutor {
             p.sendMessage(MessageUtils.permissionMessage(Permissions.COMMAND_HAT));
         }
         if (p.getItemInHand() == null || !p.getItemInHand().getType().isBlock()) {
-            p.sendMessage(MessageUtils.errorMessage(prefix, "invalid block"));
+            p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("hatInvalidBlock")));
         }
         if (p.getInventory().getHelmet() != null) {
-            p.sendMessage(MessageUtils.errorMessage(prefix, "already has helmet"));
+            p.sendMessage(MessageUtils.errorMessage(prefix, cfg.getString("hatHelmet")));
         } else {
         p.getInventory().setHelmet(p.getItemInHand());
         p.getInventory().remove(p.getItemInHand());
-        p.sendMessage(MessageUtils.successMessage(prefix, "success")); //TODO: Add pretty messages
+        p.sendMessage(MessageUtils.successMessage(prefix, cfg.getString("hatSuccess")));
         }
         return false;
     }

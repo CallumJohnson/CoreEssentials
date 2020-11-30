@@ -96,6 +96,20 @@ flySuccessOtherDisableTarget: 'Your fly was &edisabled &7by &e%player%&7.'
 # /fly incorrect usage message
 flyIncorrectUsage: 'Incorrect Usage! Use /fly [player]'
 
+## *Hat Command*
+
+# /hat command prefix
+hatPrefix: 'Hat'
+
+# /hat command message
+hatSuccess: 'Set your new hat. Enjoy it!'
+
+# /hat error if chosen hat isn't a valid block.
+hatInvalidBlock: 'The chosen block/item is''t a valid hat.'
+
+# /hat error if user already has a item on the helmet slot
+hatHelmet: 'You cannot place a hat if your helmet slot already has an item on it.'
+
 ## *Heal Command*
 
 # /heal command prefix
