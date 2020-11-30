@@ -15,6 +15,8 @@ commands:
         description: Replenished yours or other player's hunger bar to the maximum capacity.
     fly:
         description: Toggles yours or other player's ability to fly, regardless of gamemode.
+    hat:
+        description: Sets your helmet as the item on your hand.
     heal:
         description: Replenished yours or other player's hunger bar to the maximum capacity.
     night:
