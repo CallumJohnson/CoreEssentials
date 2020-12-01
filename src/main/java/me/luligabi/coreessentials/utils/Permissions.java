@@ -23,4 +23,5 @@ public class Permissions {
     // Perks
     public static String PERK_JOIN_MESSAGE = "coreessentials.perk.join";
     public static String PERK_QUIT_MESSAGE = "coreessentials.perk.quit";
+    public static String PERK_FULL_JOIN = "coreessentials.perk.fulljoin";
 }
