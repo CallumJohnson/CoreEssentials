@@ -1,6 +1,7 @@
 package me.luligabi.coreessentials;
 
 import me.luligabi.coreessentials.command.*;
+import me.luligabi.coreessentials.perk.ColoredSignPerk;
 import me.luligabi.coreessentials.perk.FullServerLoginPerk;
 import me.luligabi.coreessentials.perk.JoinMessagePerk;
 import me.luligabi.coreessentials.perk.QuitMessagePerk;
@@ -40,5 +41,6 @@ public final class CoreEssentials extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new JoinMessagePerk(), this);
         getServer().getPluginManager().registerEvents(new QuitMessagePerk(), this);
         getServer().getPluginManager().registerEvents(new FullServerLoginPerk(), this);
+        getServer().getPluginManager().registerEvents(new ColoredSignPerk(), this);
     }
 }
