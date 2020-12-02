@@ -20,6 +20,7 @@ public class Permissions {
     public static String COMMAND_SUN = "coressentials.command.sun";
     public static String COMMAND_THUNDER = "coreessentials.command.thunder";
     public static String COMMAND_TPALL = "coreessentials.command.tpall";
+    public static String COMMAND_TPHERE = "coreessentials.command.tphere";
 
     // Perks
     public static String PERK_JOIN_MESSAGE = "coreessentials.perk.join";

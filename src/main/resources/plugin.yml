@@ -32,3 +32,5 @@ commands:
         aliases: [storm]
     tpall:
         description: Teleports all Players to the user.
+    tphere:
+        description: Teleports a player to your location.

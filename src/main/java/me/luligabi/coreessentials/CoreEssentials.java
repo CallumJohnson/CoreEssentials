@@ -37,6 +37,7 @@ public final class CoreEssentials extends JavaPlugin {
         getCommand("sun").setExecutor(new SunCommand());
         getCommand("thunder").setExecutor(new ThunderCommand());
         getCommand("tpall").setExecutor(new TpAllCommand());
+        getCommand("tphere").setExecutor(new TpHereCommand());
     }
     private void registerPerks() {
         getServer().getPluginManager().registerEvents(new JoinMessagePerk(), this);

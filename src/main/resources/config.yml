@@ -181,6 +181,16 @@ tpAllPrefix: 'TpAll'
 # /tpall command message
 tpAllSuccess: 'You were teleported by &e%player%&7.'
 
+## *TpHere Command*
+
+tpHerePrefix: 'TpHere'
+
+tpHereSuccess: '&e%target% &7was successfully teleported to you.'
+
+tpHereSuccessTarget: 'You were teleported to &e%player%&7.'
+
+tpHereIncorrectUsage: 'Incorrect Usage! Use /tphere <player>'
+
 ### --------------------------------------------------------------------------
 
 ### Perks
