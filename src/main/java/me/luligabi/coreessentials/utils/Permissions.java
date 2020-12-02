@@ -19,10 +19,12 @@ public class Permissions {
     public static String COMMAND_RAIN = "coreesssentials.command.rain";
     public static String COMMAND_SUN = "coressentials.command.sun";
     public static String COMMAND_THUNDER = "coreessentials.command.thunder";
+    public static String COMMAND_TPALL = "coreessentials.command.tpall";
 
     // Perks
     public static String PERK_JOIN_MESSAGE = "coreessentials.perk.join";
     public static String PERK_QUIT_MESSAGE = "coreessentials.perk.quit";
     public static String PERK_FULL_JOIN = "coreessentials.perk.fulljoin";
     public static String PERK_COLORED_SIGNS = "coreessentials.perk.coloredsigns";
+
 }

@@ -30,3 +30,5 @@ commands:
     thunder:
         description: Sets world weather to thunder.
         aliases: [storm]
+    tpall:
+        description: Teleports all Players to the user.

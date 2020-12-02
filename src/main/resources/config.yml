@@ -173,6 +173,14 @@ thunderPrefix: 'Thunder'
 # /thunder command message
 thunderSuccess: 'Weather on &e%world% &7was set to &eTHUNDER&7.'
 
+## *TpAll Command*
+
+# /tpall command prefix
+tpAllPrefix: 'TpAll'
+
+# /tpall command message
+tpAllSuccess: 'You were teleported by &e%player%&7.'
+
 ### --------------------------------------------------------------------------
 
 ### Perks
