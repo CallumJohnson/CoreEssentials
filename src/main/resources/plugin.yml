@@ -1,7 +1,7 @@
 name: CoreEssentials
-version: 0.0.1
+version: 0.0.2
 main: me.luligabi.coreessentials.CoreEssentials
-authors: [Luligabi]
+authors: [Luligabi, CallumJohnson]
 website: https://github.com/Luligabi1/CoreEssentials
 commands:
     clearchat:

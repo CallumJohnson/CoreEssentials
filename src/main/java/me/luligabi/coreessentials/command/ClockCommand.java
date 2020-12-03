@@ -10,10 +10,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+@Deprecated
 public class ClockCommand implements CommandExecutor {
 
+    @Deprecated
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
 
+    @Deprecated
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
@@ -29,6 +32,8 @@ public class ClockCommand implements CommandExecutor {
                 .replace("%clock%", parseTime(p.getWorld().getTime(), cfg.getBoolean("ampm")))));
         return false;
     }
+
+    @Deprecated
     private static String parseTime(long time, boolean ampm) {
         long hours = time / 1000 + 6;
         long minutes = (time % 1000) * 60 / 1000;
@@ -50,4 +55,5 @@ public class ClockCommand implements CommandExecutor {
             return hours + ":" + mm + ampmsys;
         }
     }
+
 }

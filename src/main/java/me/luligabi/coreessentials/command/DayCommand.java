@@ -10,12 +10,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+@Deprecated
 public class DayCommand implements CommandExecutor {
 
-
+    @Deprecated
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
+
+    @Deprecated
     String prefix = cfg.getString("dayPrefix");
 
+    @Deprecated
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {

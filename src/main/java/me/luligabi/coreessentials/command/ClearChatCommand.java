@@ -11,10 +11,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+@Deprecated
 public class ClearChatCommand implements CommandExecutor {
 
+    @Deprecated
     FileConfiguration cfg = CoreEssentials.plugin.getConfig();
 
+    @Deprecated
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
@@ -33,7 +36,7 @@ public class ClearChatCommand implements CommandExecutor {
             for(int i = 0;i<100;i++) {
                 Bukkit.broadcastMessage("");
             }
-            MessageUtils.sendCenteredMessage(all, ChatColor.translateAlternateColorCodes('&', silentMessage));
+            // MessageUtils.sendCenteredMessage(all, ChatColor.translateAlternateColorCodes('&', silentMessage));
             Bukkit.broadcastMessage("");
         }
         return false;

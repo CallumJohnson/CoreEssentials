@@ -1,12 +1,15 @@
 package me.luligabi.coreessentials;
 
 import me.luligabi.coreessentials.command.*;
+import me.luligabi.coreessentials.command.abstraction.CustomCommand;
 import me.luligabi.coreessentials.perk.ColoredSignPerk;
 import me.luligabi.coreessentials.perk.FullServerLoginPerk;
 import me.luligabi.coreessentials.perk.JoinMessagePerk;
 import me.luligabi.coreessentials.perk.QuitMessagePerk;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.lang.reflect.Constructor;
 
 public final class CoreEssentials extends JavaPlugin {
 
@@ -19,15 +22,21 @@ public final class CoreEssentials extends JavaPlugin {
         registerPerks();
         saveDefaultConfig();
     }
+
     @Override
     public void onDisable() {
         HandlerList.unregisterAll(this);
     }
+
     private void registerCommands() {
-        getCommand("clearchat").setExecutor(new ClearChatCommand());
-        getCommand("clock").setExecutor(new ClockCommand());
-        getCommand("day").setExecutor(new DayCommand());
-        getCommand("feed").setExecutor(new FeedCommand());
+        // getCommand("clearchat").setExecutor(new ClearChatCommand());
+        registerCommand(ClearChat.class);
+        // getCommand("clock").setExecutor(new ClockCommand());
+        registerCommand(Clock.class);
+        // getCommand("day").setExecutor(new DayCommand());
+        registerCommand(Day.class);
+        // getCommand("feed").setExecutor(new FeedCommand());
+        registerCommand(Feed.class);
         getCommand("fly").setExecutor(new FlyCommand());
         getCommand("hat").setExecutor(new HatCommand());
         getCommand("heal").setExecutor(new HealCommand());
@@ -45,4 +54,20 @@ public final class CoreEssentials extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new FullServerLoginPerk(), this);
         getServer().getPluginManager().registerEvents(new ColoredSignPerk(), this);
     }
+
+    /**
+     * Method to register a command to a specific plugin.
+     *
+     * @param commandClass - CustomCommand class to be registered.
+     */
+    public void registerCommand(Class<? extends CustomCommand<?>> commandClass) {
+        try {
+            Constructor<? extends CustomCommand<?>> constructor = commandClass.getDeclaredConstructor(getClass());
+            CustomCommand<?> customCommand = constructor.newInstance(this);
+            customCommand.register();
+        } catch (Exception ex) {
+            System.err.println("Failed to Register CustomCommand.");
+        }
+    }
+
 }
