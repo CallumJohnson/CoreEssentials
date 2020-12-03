@@ -1,2 +1,2 @@
 # CoreEssentials
-Core Utilitaries plugin for Spigot
+Core Utilities plugin for Spigot
